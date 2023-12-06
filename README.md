@@ -1,2 +1,2 @@
 # Python
-Nesse repositório, vou colocar o meu desenvolvimento em Python.
+Nesse repositório, estará explicito o meu desenvolvimento em Python.
