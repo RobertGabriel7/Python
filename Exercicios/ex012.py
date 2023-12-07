@@ -1,7 +1,7 @@
 valor = float(input('Digite o valor do produto: R$'))
 
-resul = (5*valor)/100
+resul = valor - (valor*5/100)
 
-print('Valor do produto com 5% de desconto é R${:.5} \n'.format(valor-resul))
+print('Valor do produto antes do disconto era de R${}. Agora com 5% de desconto, ficou R${:.5}! \n'.format(valor,resul))
 
 #feito
