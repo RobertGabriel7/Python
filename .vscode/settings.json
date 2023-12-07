@@ -1,0 +1,10 @@
+{
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.activeStateToolPath": "C:\\Users\\rober\\AppData\\Local\\Microsoft\\WindowsApps\\python3.11.exe",
+    
+    "python.autoComplete.extraPaths": [
+        
+    ],
+    "python.analysis.extraPaths": []
+}
