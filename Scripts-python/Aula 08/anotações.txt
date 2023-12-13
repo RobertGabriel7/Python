@@ -45,3 +45,10 @@ from math import sqrt, pow
 Para saber todas as bibliotecas do Python com base na sua versão instalada:
 
 https://docs.python.org/3/library/index.html
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PyPi = Python Pack Index
+
+Eu posso baixar bibliotecas criadas por outros devs ou até mesmo criar a minha própria biblioteca.
