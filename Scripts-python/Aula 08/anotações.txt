@@ -1,0 +1,5 @@
+Utilizando Módulos:
+
+Exemplo: quando eu compro um carro básico, ele vem com bãsico para funcionar, porém, eu posso colocar um som melhor do que veio. Ou seja, eu posso adicionar módulos nele, melhorando tudo do carro.
+
+O python de forma semelhante, vem com o básico pré instalado, mas eu posso adcionar mais módulos nele.
