@@ -28,9 +28,15 @@ Math
 ceil: arrendamento pra cima: 
 flor: arrendamento pra baixo: 
 runc: vai eliminar o numero da virgula pra frente: t
-pow:  vai funcionar de forma semelhante aos dois ** :
+pow:  vai funcionar de forma semelhante aos dois ** (potência):
 sqrt: para calcular raiz qudrada: 
 factorial :calculo fatorial
 
+Quero apenas raiz qudrada:
 
+from math import sqrt
+
+or
+
+from math import sqrt, pow 
 
