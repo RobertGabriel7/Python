@@ -5,9 +5,9 @@ a2 = input('Digite o nome do segundo aluno(a): ')
 a3 = input('Digite o nome do terceiro aluno(a): ')
 a4 = input('Digite o nome do quarto aluno(a): ')
 
-a = random.randint(1,4)
+sele = [a1,a2,a3,a4]
 
-print('O aluno(a) que vai apagar o quadro é: {}'.format(random.choice(a1,a2,a3,a4,4)))
+print('O aluno(a) que vai apagar o quadro é: {}'.format(random.choice(sele)))
 
 
 #

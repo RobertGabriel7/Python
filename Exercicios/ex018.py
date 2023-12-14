@@ -1,14 +1,18 @@
-import math
+from math import sin, cos, tan, radians
 
-seno = float(input('Digite o seno: '))
+angulo = float(input('Digite o ângulo: '))
 
-cosseno = float(input('Digite o cosseno: '))
+#Precisa colocar radians porque o valor precisa ser convertido para radianos
 
-tangente = float(input('Digite o tangente: '))
+seno = sin(radians(angulo))
 
-print('Seno em graus: {:.4f}'.format(math.degrees(seno)))
-print('Cosseno em graus: {:.4f}'.format(math.degrees(cosseno)))
-print('Tangente em graus: {:.4f}'.format(math.degrees(tangente)))
+cosseno = cos(radians(angulo))
 
+tangente = tan(radians(angulo))
 
-#Preciso terminar....
+print('Seno em graus: {:.2f}'.format(seno))
+
+print('Cosseno em graus: {:.2f}'.format(cosseno))
+
+print('Tangente em graus: {:.2f}'.format(tangente))
+
