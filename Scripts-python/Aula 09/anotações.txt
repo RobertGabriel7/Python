@@ -1,0 +1,14 @@
+Cadeia de caractares:
+
+Fatiamente é pegar pedaços de uma string
+
+Colchete [] no python é um identificador de uma estrututa de dados, ou chamado de lista.
+
+
+exemplo:
+
+frase = 'Curso de Python'
+
+frase[9]
+
+saida: 'P'
