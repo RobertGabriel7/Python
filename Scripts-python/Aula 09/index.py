@@ -36,3 +36,16 @@ print(frase.count('r'))
 
 print(frase.count('r',0,15))
 
+#Vai dizer em qual indice começou o 'em'
+
+print(frase.find('em'))
+
+
+#Quando é digitado uma string que não tem na variavel, o método vai retornar -1 porque não foi encontrado.
+
+print(frase.find('IOS'))
+
+
+#Dentro da varivael frase existe a palavra Curso 
+
+print('Curso' in frase)
