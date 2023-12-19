@@ -4,11 +4,20 @@ Fatiamente é pegar pedaços de uma string
 
 Colchete [] no python é um identificador de uma estrututa de dados, ou chamado de lista.
 
+*Começa a partir do zero*
 
 exemplo:
 
-frase = 'Curso de Python'
+frase = 'Curso em Vídeo Python'
 
 frase[9]
 
 saida: 'P'
+
+
+outro exemplo: 
+
+frase = 'Curso em Vídeo Python'
+
+#vai selecionar a partir do indice 9 até o 12, não o 13.
+frase[9:13]

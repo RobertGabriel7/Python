@@ -1,4 +1,4 @@
-frase = 'Curso de Python'
+frase = 'Curso em Vídeo Python'
 
 print(frase[9])
 
