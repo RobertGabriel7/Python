@@ -62,15 +62,42 @@ print(frase.upper())
 
 print(frase.lower())
 
+#A primeira letra será MAIUSCULA e todas as outras serão minusculas
+
+print(frase.capitalize())
+
+#A primeira letra de todas as palavras serão MAIUSCULA, apenas a primeira.
+
+print(frase.title())
+
+#Remove todos os espaços desnecessarios. Deixa apenas o espaço do meio. Espaços antes e no fim da palavra é retirado.
+
+frase2 = '   Aprenda Python  '
 
 
+print(frase2.strip())
 
 
+#* A letra r no python trata de algo a direita (right) *
+
+#Remover espaços da direita e manter da esquerda
+
+print(frase2.rstrip())
+
+#Remover espaços da esquerda e manter da direita
+
+print(frase2.lstrip())
 
 
+#variavel.split() Ao inves de considerar os espaços e conta-los, o split() só considera as strings. Por exemplo:
+
+# C u r s o   e m  V i d e o 
+# 0 1 2 3 4   0 1  0 1 2 3 4 
 
 
+#Cada palavra recebe indexação nova 
 
+#Cada uma dessas palavras é colocada dentro de outra lista, o split regera uma lista com todas as palavras de uma cadeia de caracteres 
 
 
 
