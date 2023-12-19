@@ -1,22 +1,17 @@
-import pygame
 
-# Inicializar o pygame
-pygame.init()
+nome = str(input('Qual o seu nome: '))
 
-# Carregar o arquivo de música
-pygame.mixer.music.load('C:\\xampp\\htdocs\\Aulas\\Python\\Exercicios\\louvor1.mp3')
+print(' \n "{}" em letras MAIUSCULAS: '.format(nome),nome.upper())
 
-# Definir o volume (opcional)
-  # Valor entre 0.0 e 1.0
+print(' \n "{}" em letras minusculas: '.format(nome),nome.lower())
 
-# Iniciar a reprodução da música
-pygame.mixer.music.play()
+nome1 = nome.replace(' ','')
 
-# Aguardar até que a música termine
-pygame.time.delay(5000)  # Espera 5 segundos (ajuste conforme necessário)
-
-# Parar a reprodução da música
+print('Quantidade de caracteres digitados, sem considerar os espaços:',len(nome1))
 
 
-# Encerrar o pygame
-pygame.quit()
+nome2 = nome.split()
+
+print('Quantidade de letras do seu primeiro nome: ', len(nome2[0]))
+
+#FEITO GRAÇAS A DEUS!

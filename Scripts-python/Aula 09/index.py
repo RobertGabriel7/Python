@@ -46,7 +46,7 @@ print(frase.find('em'))
 print(frase.find('IOS'))
 
 
-#Dentro da varivael frase existe a palavra Curso 
+#Dentro da varivael frase existe a palavra Curso ?
 
 print('Curso' in frase)
 
@@ -115,7 +115,7 @@ print(' '.join(frase3))
 print(""" Portanto, a principal diferença está na associação a objetos: uma função é independente, enquanto um método está associado a um objeto específico. Ambos são usados para realizar operações e modularizar o código, promovendo a reutilização. """)
 
 
-#Joga a frase em letra MAIUSCULA e conta a quantidade
+#Joga a frase em letra MAIUSCULA e conta a quantidade de letra O
 
 print(frase3.upper().count('O'))
 
