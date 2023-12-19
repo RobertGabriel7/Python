@@ -49,3 +49,21 @@ print(frase.find('IOS'))
 #Dentro da varivael frase existe a palavra Curso 
 
 print('Curso' in frase)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
