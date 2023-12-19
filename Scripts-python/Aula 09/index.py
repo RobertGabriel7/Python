@@ -97,7 +97,7 @@ print(frase2.lstrip())
 
 #Cada palavra recebe indexação nova 
 
-#Cada uma dessas palavras é colocada dentro de outra lista, o split regera uma lista com todas as palavras de uma cadeia de caracteres 
+#Cada uma dessas palavras é colocada dentro de uma lista, o split regera uma lista e coloca essas frases em indices 
 
 
 frase3 = 'Curso de Python é top'
@@ -119,6 +119,11 @@ print(""" Portanto, a principal diferença está na associação a objetos: uma 
 
 print(frase3.upper().count('O'))
 
+frase4 = 'Curso em video Python'
 
+dividido = frase4.split()
 
+#Acessando o indice 2 da lista e a 3 palavra
+
+print(dividido [2] [3])
 
