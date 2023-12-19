@@ -29,3 +29,6 @@ Por via de regra as listas não podem ser alteradas, é imutavel, porém é poss
 
 
 Não pode ser alterada atraves dos elementos, mas atraves dos métodos.
+
+
+* Tudo que tiver () é um método. * 

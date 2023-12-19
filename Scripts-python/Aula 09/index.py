@@ -50,6 +50,18 @@ print(frase.find('IOS'))
 
 print('Curso' in frase)
 
+#Com o replace é possivel alterar os elementos a partir desse método. Primeiro selecione a palavra antiga e depois coloque a palavra nova.
+
+print(frase.replace('Python','PYTHON'))
+
+#Para deixar em MAIUSCULO
+
+print(frase.upper())
+
+#Para deixar em minusculo
+
+print(frase.lower())
+
 
 
 
