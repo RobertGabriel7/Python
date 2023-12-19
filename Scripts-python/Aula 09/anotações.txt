@@ -21,3 +21,6 @@ frase = 'Curso em Vídeo Python'
 
 #vai selecionar a partir do indice 9 até o 12, não o 13.
 frase[9:13]
+
+
+
