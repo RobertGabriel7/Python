@@ -89,7 +89,7 @@ print(frase2.rstrip())
 print(frase2.lstrip())
 
 
-#variavel.split() Ao inves de considerar os espaços e conta-los, o split() só considera as strings. Por exemplo:
+#variavel.split() Ao inves de considerar os espaços e conta-los, o split() só considera as strings e sepera elas por listas. Por exemplo:
 
 # C u r s o   e m  V i d e o 
 # 0 1 2 3 4   0 1  0 1 2 3 4 
@@ -100,8 +100,24 @@ print(frase2.lstrip())
 #Cada uma dessas palavras é colocada dentro de outra lista, o split regera uma lista com todas as palavras de uma cadeia de caracteres 
 
 
+frase3 = 'Curso de Python é top'
 
 
+print(frase3.split())
+
+#' '.join(frase3) junta as string separadas por listas. 
+
+print(' '.join(frase3))
+
+
+#Para textos longos que precisa pular linha, só precisa colocar 3 parenteses. Por exemplo:
+
+print(""" Portanto, a principal diferença está na associação a objetos: uma função é independente, enquanto um método está associado a um objeto específico. Ambos são usados para realizar operações e modularizar o código, promovendo a reutilização. """)
+
+
+#Joga a frase em letra MAIUSCULA e conta a quantidade
+
+print(frase3.upper().count('O'))
 
 
 
