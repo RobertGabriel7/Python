@@ -1,9 +1,10 @@
-nomeCIty = input('Digite o nome de uma cidade: ')
+#A variavel vai recber o nome sem os espaços laterais e todos os caracteres em minusculos
 
+nomeCIty = input('Digite o nome de uma cidade: ').strip()
 
 priPala = nomeCIty.split()
 
-nomeTeste = str(priPala[0])
+nomeTeste = str(priPala[0]).upper()
 
 nomeSolici = 'SANTO'
 

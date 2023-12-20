@@ -1,6 +1,5 @@
-nome = str(input('Digite o seu nome: '))
+nome = str(input('Digite o seu nome: ')).strip()
 nome1 = nome.lower()
-
 
 nome2 = ('silva' in nome1)
 

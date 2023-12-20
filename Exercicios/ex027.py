@@ -7,6 +7,9 @@ indiceDeNome1 = nomeCompleto.rsplit()
 print('O seu nome completo é "{}"'.format(nomeCompleto))
 
 print('O seu primeiro nome "{}"'.format(indiceDeNome[0]))
+
+#O -1 vai mostrar a ultima string
+
 print('O seu ultimo nome "{}"'.format(indiceDeNome1[-1]))
 
 #FEITO GRAÇAS A DEUS!
