@@ -1,6 +1,10 @@
 import calendar
+from datetime import date
+anoQualquer = int(input('Digite um ano qualquer (0 para o ano atual): '))
 
-anoQualquer = int(input('Digite um ano qualquer: '))
+if anoQualquer ==0:
+
+    anoQualquer = date.today().year
 
 # Verificar se o ano é bissexto usando a biblioteca calendar
 if calendar.isleap(anoQualquer):
