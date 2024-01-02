@@ -12,7 +12,7 @@
 #3 - * / // %
 #4 - + -
 
-# '-'*10 o resuktado é: '----------'
+# '-'*10 o resultado é: '----------'
 
 #Aumenta o resultado em 20 caracteres
 
