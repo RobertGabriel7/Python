@@ -1,0 +1,5 @@
+Projetinho para Backend S2
+
+MiniCurso Python é um minicurso que tem o objetivo de ensinar um projeto prático com Python e Flask (Framework)
+
+Será criada uma API que simula um sistema de e-commerce.

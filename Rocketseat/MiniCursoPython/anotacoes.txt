@@ -1,1 +1,0 @@
-É um minicurso que tem o objetivo de ensinar um projeto prático com Python e Flask (Framework)

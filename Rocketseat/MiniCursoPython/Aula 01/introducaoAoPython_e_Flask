@@ -1,0 +1,52 @@
+Introdução ao Python e Flask.
+
+Swagger Editor (https://swagger.io/tools/swagger-editor/) auxilia na criação e planejamento de APIs.
+
+No Backend é onde acontece as chamadas, basicamento disponibilizamos rotas onde uma aplicação ou usuario consegue chamar essa rota e obter informações.
+
+No swagger editor, cada linha é uma rota e elas têm cores diferentes porque são métodos diferentes.
+
+Então numa linha tem a rota, o método (que é a cor), o endpoint (o que faz) e a discriação
+
+
+As duas primeiras rotas são: Login (método POST) e Logout (método POST): essas rotas precisam de ser protegidas pois nelas são passadas informações sensiveis (autenticação), porém, na parte de produtos (é um e-commerce) não precisa de autentificação.
+
+
+* Quando no Swagger tiver uma linha com a cor amarela ( método PUT ) quer dizer que é uma atualização.
+
+
+Métodos:
+
+Login e logout: Método POST
+
+products (lista de produtos), products {porduct_id} (detalhe do produto) e products search: Método GET
+
+products add: Método POST
+
+products update {product_id}: Método PUT (atualização)
+
+products delete {product_id}: Método DELETE
+
+/api/cart/add/{product_id}
+Add item to the cart : Método POST.
+
+/api/cart/remove/{item_id}
+Remove item from the cart: Método DELETE.
+
+/api/cart
+View the user's cart: Método GET
+
+/api/cart/checkout
+Checkout and clear the cart: POST
+
+
+--------------- O que cada método faz ---------------
+
+
+GET	Obter informações	Acessar um site
+
+POST	Enviar dados	Enviar um formulário
+
+PUT	Atualizar recurso	Atualizar perfil
+
+DELETE	Remover recurso	Excluir arquivo
