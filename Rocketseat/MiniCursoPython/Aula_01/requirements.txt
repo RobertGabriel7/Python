@@ -1,0 +1,7 @@
+Flask==2.3.0
+Flask-SQLALchemy==3.1.1
+Flask-Login==0.6.2
+Werkzeug==2.3.0 
+
+
+// Para instalar bibliotecas de uma vez: basta criar um arquivo chamado requirements.txt, escrever as bibliotecas que deseja instalar e depois abra o terminal e digite esse código:  pip3 install -r requirements.txt
