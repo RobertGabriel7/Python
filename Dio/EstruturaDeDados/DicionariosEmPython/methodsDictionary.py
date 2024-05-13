@@ -97,3 +97,27 @@ print("Após update:", dicionario)
 dicionario = {"a": 1, "b": 2, "c": 3}
 valores = dicionario.values()
 print("Valores:", valores)
+
+# Para verificar se uma chave existe em um dictionary
+
+resultado = "a" in dicionario
+print(resultado) # True
+
+# É possivel verificar também quando um dicionario está dentro de outro dicionario.
+
+# Para remover chave e valor
+
+# Remove os valores da chave "a"
+del dicionario["a"]
+
+#Remove tudo do dicionario
+del dicionario
+
+
+
+
+
+
+
+
+
