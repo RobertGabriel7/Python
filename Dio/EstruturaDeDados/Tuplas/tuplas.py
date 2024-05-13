@@ -1,5 +1,5 @@
 """ 
-Tuplas são semelhante as listas, porem os seus valores não podem ser mudados.
+Tuplas são semelhante as listas, porém os seus valores não podem ser mudados.
 
 tipo assim:
 

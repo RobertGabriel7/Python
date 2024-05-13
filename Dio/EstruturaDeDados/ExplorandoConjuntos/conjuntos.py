@@ -99,5 +99,53 @@ conjuC = {1,0}
 print(conjuA.isdisjoint(conjuB)) # True
 print(conjuA.isdisjoint(conjuC)) # False 
 
-""" Para adicionar elementos/valores não existente: {}.add """
+""" Para adicionar elementos/valores não existente em um object: {}.add """
 
+sorteio = {1, 25}
+
+sorteio.add(25)
+print(sorteio)
+sorteio.add(42)
+print(sorteio)
+sorteio.add(25)
+print(sorteio)
+
+
+""" {}.clear limpa o set 
+
+# sorteio.clear()
+
+"""
+
+""" {}.copy copia o set 
+
+# sorteio.copy()
+
+"""
+
+""" {}.discard descarda valores que tem no set 
+
+sorteio.discard(1)
+sorteio.discard(45) # Se não tiver o valor, ele fica de boas
+
+"""
+
+""" {}.pop retira os retira os elementos/valores 
+
+sorteio.pop() # Remove o utlime elemento da esquerda para a direita
+
+"""
+
+""" {}.remove remove os elementos/valores
+
+sorteio.remove(0)
+
+discard é melhor que remove
+"""
+
+""" {}.len é a quantidade de elementos """
+
+""" in serve para se um numero/string está em um set """
+
+1 in sorteio # True
+28 in sorteio # False 
