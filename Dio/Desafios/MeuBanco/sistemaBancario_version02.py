@@ -1,98 +1,75 @@
 """ 
 Módulo 'os' do python serve para modifcar algumas coisas do sistema qual o python está inserido.
-O os permite que você execute comandos do sistema, manipule caminhos de arquivos, manipule variáveis de ambiente e muito mais 
+O "os" permite que você execute comandos do sistema, manipule caminhos de arquivos, manipule variáveis de ambiente e muito mais 
 
 """
+# Desafio: Sacar, depositar e visualizar o histórico
+
 import os
 
+saldo = 100
+limiteDeSaques = 1
 desejaContinuar = 'y'
-saldo = 100.45
-limiteDeSaque = 3
-opcao = 0
-saquesRealizados = 0
 
+# Sacar valores
+def sacar(valorDoSaque):
 
-""" Function para limpar o terminal """
-def limpar_terminal():
-    # Verifica o sistema operacional
+    if (limiteDeSaques > 3):
+        return print("Voce somente pode fazer 3 saques por dia!")
+
+    else:
+        global saldo 
+        saldo -= valorDoSaque        
+        return print(f"Saldo atual: R${saldo}")
+
+# Depositar valores
+def depositar(deposito):
+    global saldo
+    saldo += deposito
+    return print(f"Saldo atual: R${saldo}")
+
+# Consulta de valores
+def extrato():
+    print(f"Voce tem R${saldo}.")
+
+# Limpar o terminal
+def limparTerminal():
+     # Verifica o sistema operacional
     if os.name == 'nt':  # Windows
         os.system('cls')
-    
-limpar_terminal()
 
+# Loop para roda o sistema bancario       
 while (desejaContinuar == 'y'):
-    
-    print(saquesRealizados)
-    """ Criar um sistema bancario com as operações: sacar, depositar e visualizar o saldo """
-
+    limparTerminal()
     print("\n ------------- Bem-vindo(a) ao Seven ------------- \n")
-    print("\nQual das opcoes a seguir vc deseja fazer: \n\n[1].Sacar \n\n[2].Depositar \n\n[3].Consulta de Saldo \n\n[4].Sair\n"
-          
-          
-    )
+    print("\nQual das opcoes a seguir vc deseja fazer: \n\n[1].Sacar \n\n[2].Depositar \n\n[3].Consulta de Saldo \n\n[4].Sair\n")
     
-    opcao = int(input("digite apenas um numero: "))
-    
+    opcao = int(input("Digite apenas uma opcao: "))
+    print(limiteDeSaques)
     
     if (opcao == 1):
-        limpar_terminal()    
-        if(saldo == 0):    
-        
-            print("Sem saldo para retirar.")
+        valorDoSaque = int(input(f"Quanto voce desejar sacar de R${saldo} ? R$"))
+        if (valorDoSaque > saldo):
+            print(f"\nO valor diigitado foi superior ao valor disponivel!\n")
             desejaContinuar = str(input("Deseja continuar: (y/n)"))
-            limpar_terminal()
-            
-        else:        
-        
-            saque = float(input("Quanto voce quer sacar? "))
-            saldo -= saque
-            
-            if(saldo <= 0):
-                limpar_terminal()
-                print("\nO valor digitado para saque foi maior do que o valor disponivel.\n") 
-                desejaContinuar = str(input("Deseja continuar: (y/n)"))
-                limpar_terminal()
-            
-            else:
-                
-                if(saquesRealizados == limiteDeSaque):
-                    limpar_terminal()
-                    print("Não pode sacar mais dinheiro, pois o limite diario é de 3 saques por dia.\n")
-                    desejaContinuar = str(input("Deseja continuar: (y/n)"))
-                    limpar_terminal()
-                else:        
-                    limpar_terminal()
-                    print(f"Saldo atual: R${saldo}")
-                    saquesRealizados += 1
-                    desejaContinuar = str(input("Deseja continuar: (y/n)"))
-                    limpar_terminal()
-            
+            limparTerminal()
+        else:
+            sacar(valorDoSaque)
+            limiteDeSaques += 1
+            desejaContinuar = str(input("Deseja continuar: (y/n)"))
+            limparTerminal()
     elif (opcao == 2):
-        
-        deposito =float(input("Quanto voce deseja depositar: "))
-        saldo += deposito
-        print(f"Saldo atual: R${saldo}")
+        deposito = int(input("\nQuando voce deseja depositar? R$"))
+        depositar(deposito)
         desejaContinuar = str(input("Deseja continuar: (y/n)"))
-        limpar_terminal()
-    
-    elif (opcao == 3):
-        limpar_terminal()        
-        print(f"Saldo atual: R${saldo}")
+        limparTerminal()
+    elif(opcao == 3):
+        extrato()
         desejaContinuar = str(input("Deseja continuar: (y/n)"))
-        limpar_terminal()    
-        
-    elif (opcao == 4):
-        
-        print("Saindo...") 
-        desejaContinuar = 'n'
-        
+        limparTerminal()
     else:
-        limpar_terminal()
-        print("Saindo...") 
+        print("Opcao invalida")
+        desejaContinuar = str(input("Deseja continuar: (y/n)"))
+        limparTerminal()    
         
-        
-        
-
 """ Graças a Deus consegui. """    
-
-    
