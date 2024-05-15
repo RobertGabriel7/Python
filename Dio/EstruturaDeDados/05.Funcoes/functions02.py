@@ -10,8 +10,8 @@ A function retorna por padrão "none"
 
 # Parâmetros especiais: para uma melhor legibilidade e desempenho é legal restrigir quais argumentos serão passados em uma function, por exemplo por posição, por posição E nome, ou somente pelo nome.
 
-# Parâmetros com nome: chave-valor *
-# Parâmetros por posição: valor /
+# Parâmetros com nome: chave-valor * valor
+# Parâmetros por posição: valor / saldo=valor
 
 # Antes da barra, os valores são passados por posição, após a barra, os valores são passados por chave-valor 
 
@@ -34,8 +34,7 @@ print(10*"-", "Keyword only: chave-valor", 10*"-")
 def criarCarinhos(*, modelo, ano, placa,  marca, motor, combustivel):
     print(modelo, ano, placa, marca, motor, combustivel)
     
-criarCarinhos(modelo="Porsche", ano=2023,placa="R7T7", marca="Porsche", motor="V12", combustivel="Uranio")  
-
+criarCarinhos(modelo="Porsche", ano=2023, placa="R7T7", marca="Porsche", motor="V12", combustivel="Uranio")  
 
 print(10*"-", "Keyword and position", 10*"-")
 
@@ -93,4 +92,3 @@ def salarioBonus(bonus, lista):
 lista = [1]
 salarioBonus(777, lista)
 print(f"Lista global: {lista}")
-

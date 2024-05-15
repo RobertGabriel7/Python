@@ -6,7 +6,7 @@ import os
 saldo = 100
 limiteDeSaques = 1
 desejaContinuar = 'y'
-
+cpf = 0
 # Sacar valores
 def sacar(valorDoSaque):
 
@@ -25,8 +25,10 @@ def depositar(deposito):
     return print(f"Saldo atual: R${saldo}")
 
 # Consulta de valores
-def extrato():
-    print(f"Voce tem R${saldo}.")
+def extrato(valorDoSaque, deposito, saldo):
+    
+    print(f"Extrato:\n{valorDoSaque}\n {deposito}\n{saldo}.")
+    print(valorDoSaque)
 
 # Limpar o terminal
 def limparTerminal():
@@ -38,7 +40,7 @@ def limparTerminal():
 while (desejaContinuar == 'y'):
     limparTerminal()
     print("\n ------------- Bem-vindo(a) ao Seven ------------- \n")
-    print("\nQual das opcoes a seguir vc deseja fazer: \n\n[1].Sacar \n\n[2].Depositar \n\n[3].Consulta de Saldo \n\n[4].Sair\n")
+    print("\nQual das opcoes a seguir vc deseja fazer: \n\n[1].Sacar \n\n[2].Depositar \n\n[3].Consulta de Saldo \n\n[4].Cadastrar conta \n\n[5].Sair\n")
     
     opcao = int(input("Digite apenas uma opcao: "))
     print(limiteDeSaques)
@@ -63,6 +65,10 @@ while (desejaContinuar == 'y'):
         extrato()
         desejaContinuar = str(input("Deseja continuar: (y/n)"))
         limparTerminal()
+    elif(opcao == 4):
+        
+        
+          
     else:
         print("Opcao invalida")
         desejaContinuar = str(input("Deseja continuar: (y/n)"))
