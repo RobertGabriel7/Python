@@ -1,12 +1,11 @@
 # TODO: Crie uma Lista 'itens' para armazenar os equipamentos:
 
-
+itens = []
+item = ""
 # TODO: Crie um loop para solicita os itens ao usuário:
-
-# TODO: Solicite o item e armazena na variável "item":
-
-# TODO: Adicione o item à lista "itens":
-
+for n in range(1, 4):
+    equi = input(f"Equipamento {n}: ")
+    itens.append(equi)
 
 # Exibe a lista de itens
 print("Lista de Equipamentos:")  
