@@ -1,0 +1,232 @@
+Se você está falando de um agente no VS Code com GitHub Copilot, a ideia é esta:
+
+Um agente é um perfil de comportamento especializado. Em vez de usar sempre o assistente “genérico”, você cria um modo com instruções claras sobre:
+
+- o que ele faz
+- como ele deve responder
+- quais ferramentas ele pode usar
+- em quais arquivos ou contextos ele atua
+- quais regras do projeto ele deve seguir
+
+**Como funciona**
+Um agente normalmente é composto por 3 camadas:
+
+1. Instruções base
+   - Definem o papel do agente.
+   - Exemplo: “você é um agente especialista em APIs Python”.
+
+2. Escopo
+   - Diz quando ele deve ser aplicado.
+   - Exemplo: somente em arquivos `.py`, ou só para tarefas de revisão.
+
+3. Conhecimento e workflow
+   - Regras, exemplos, padrões do projeto, passos obrigatórios.
+   - Exemplo: “sempre validar tratamento de erro HTTP”, “não editar sem ler o arquivo antes”.
+
+Na prática, isso costuma ser feito com arquivos de customização, como:
+
+- `copilot-instructions.md`
+- `*.instructions.md`
+- `*.prompt.md`
+- `*.agent.md`
+- `SKILL.md`
+- `AGENTS.md`
+
+Cada um tem um papel um pouco diferente:
+
+- `copilot-instructions.md`
+  - Regras gerais do repositório.
+  - Vale para quase tudo naquele projeto.
+
+- `*.instructions.md`
+  - Instruções mais específicas por contexto.
+  - Exemplo: uma instrução só para frontend ou só para Python.
+
+- `*.prompt.md`
+  - Prompt reutilizável para tarefas específicas.
+  - Exemplo: “revisar código com foco em segurança”.
+
+- `*.agent.md`
+  - Define um agente personalizado.
+  - É o lugar mais direto para criar uma persona de trabalho especializada.
+
+- `SKILL.md`
+  - Empacota conhecimento especializado.
+  - Útil quando você quer que o agente saiba seguir um processo ou domínio específico.
+
+- `AGENTS.md`
+  - Pode servir como catálogo ou definição complementar dos agentes disponíveis, dependendo da estrutura adotada.
+
+**Forma simples de pensar**
+Se quiser algo rápido:
+
+- use `copilot-instructions.md` para regras gerais
+- use `*.instructions.md` para comportamentos específicos
+- use `*.agent.md` quando quiser criar um agente com identidade própria
+
+**Exemplo de agente**
+Um agente para revisar APIs Python poderia ter algo assim:
+
+```md
+---
+name: Python API Reviewer
+description: Revisa APIs Python com foco em bugs, tratamento de erro e clareza
+tools: read, search, errors
+---
+
+Você é um agente especializado em revisão de APIs Python.
+
+Objetivos:
+- identificar bugs e riscos
+- verificar tratamento de exceções
+- checar clareza de nomes e estrutura
+- apontar testes ausentes
+
+Regras:
+- priorize findings antes de resumo
+- cite arquivos e funções afetadas
+- não proponha refatorações grandes sem necessidade
+- foque em comportamento, regressão e segurança
+```
+
+A lógica desse arquivo é:
+
+- `name`: nome do agente
+- `description`: quando ele deve ser usado
+- corpo do arquivo: comportamento detalhado
+
+**Como criar na prática**
+O fluxo mais comum é:
+
+1. Definir o objetivo do agente
+   - Exemplo: “agente para revisar código Python”
+   - ou “agente para criar automações com requests”
+
+2. Escrever as instruções
+   - papel
+   - prioridades
+   - restrições
+   - formato de resposta
+
+3. Salvar no arquivo apropriado
+   - se for um agente mesmo: `*.agent.md`
+   - se for regra geral do projeto: `copilot-instructions.md`
+
+4. Testar com tarefas reais
+   - “revise este arquivo”
+   - “explique esse módulo”
+   - “encontre bugs de integração”
+
+5. Ajustar o prompt
+   - se ele estiver muito genérico, restrinja
+   - se estiver rígido demais, simplifique
+
+**Boa estrutura para um agente**
+Um agente bom costuma ter:
+
+- papel claro
+- escopo claro
+- prioridades claras
+- limites claros
+- formato de saída previsível
+
+Exemplo de estrutura:
+
+```md
+Você é um agente especialista em Python.
+
+Seu foco:
+- requests
+- tratamento de erros
+- organização de código
+
+Sempre:
+- leia o arquivo antes de responder
+- priorize bugs reais
+- sugira mudanças pequenas e objetivas
+
+Nunca:
+- invente comportamento não visível no código
+- faça mudanças amplas sem necessidade
+```
+
+**Quando usar agente e quando não usar**
+Use agente quando:
+
+- você repete o mesmo tipo de tarefa
+- quer padronizar respostas
+- precisa de comportamento especializado
+- trabalha com um domínio específico
+
+Não precisa criar agente quando:
+
+- é só uma instrução pontual
+- a tarefa é muito simples
+- basta um prompt único no chat
+
+**Exemplos úteis de agentes**
+Você poderia criar agentes como:
+
+1. `Python Reviewer`
+   - revisão de bugs e riscos
+
+2. `Request Debugger`
+   - foco em `requests`, APIs, timeout, status code, JSON
+
+3. `Refactor Assistant`
+   - melhorar organização e nomes sem alterar comportamento
+
+4. `Beginner Explainer`
+   - explicar código de forma didática
+
+Como seu workspace tem arquivos Python e um deles parece ligado a requisições, um agente útil para você seria algo como:
+
+- “Agente para analisar códigos com `requests` e APIs CEP”
+- foco em:
+  - `status_code`
+  - `response.json()`
+  - tratamento de exceção
+  - validação de entrada
+  - nomes de variáveis
+  - fluxo principal
+
+**Se quiser começar do jeito certo**
+A abordagem mais prática é esta:
+
+1. Primeiro criar um `copilot-instructions.md` com regras gerais do projeto
+2. Depois criar um `RequestDebugger.agent.md` para tarefas de API
+3. Se necessário, criar um `SKILL.md` com checklist de diagnóstico HTTP
+
+**Exemplo de conteúdo inicial para o seu caso**
+```md
+Você é um agente especialista em Python e integrações HTTP.
+
+Prioridades:
+- identificar erros em chamadas com requests
+- validar URLs, parâmetros e tratamento de exceções
+- checar uso correto de response.status_code e response.json()
+
+Formato de resposta:
+- problemas encontrados
+- causa provável
+- correção sugerida
+- exemplo de código, se necessário
+
+Restrições:
+- não mudar arquitetura sem necessidade
+- manter soluções simples
+```
+
+**Resumo**
+Criar um agente é basicamente transformar um comportamento desejado em instruções persistentes e reutilizáveis. Você define:
+
+- quem o agente é
+- o que ele faz
+- como ele decide
+- como ele responde
+
+Se quiser, no próximo passo eu posso fazer uma destas opções:
+
+1. te mostrar um exemplo real de `*.agent.md` para Python
+2. te mostrar a diferença entre `agent`, `instructions` e `skill`
+3. montar um agente pronto para o seu projeto atual com foco em `requests` e API CEP
