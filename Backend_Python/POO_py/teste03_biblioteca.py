@@ -6,6 +6,6 @@ from teste03_livro import Livro
 
 otherbook = Livro("1984", "George Orwell", 1949)
 
-otherbook.emprestar()
+#otherbook.emprestar()
 
 Livro.verificar_disponibilidade(1949)
