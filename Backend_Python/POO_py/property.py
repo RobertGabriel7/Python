@@ -1,8 +1,13 @@
 """print('Graças a Deus, consegui!')"""
+import sys
+
+# Configura o terminal para exibir caracteres UTF-8 (acentos, ç, etc.) sem erros de codificação
+sys.stdout.reconfigure(encoding="utf-8")
 
 from avaliacao import AvaliacaoClass
 
 class Restaurante:
+    
     restaurantes = []
 
     def __init__(self, nome, categoria):
@@ -37,21 +42,41 @@ class Restaurante:
         self._ativo = not self._ativo
 
     def receber_avaliacao(self, cliente, nota):
-        avalia = AvaliacaoClass(cliente, nota)
-        self._avaliacao.append(avalia)
+        
+        if nota < 1 or nota > 5:
+            
+            print(f'\nA nota digitada "{nota}" não é aceita. A nota deve ser de 1 a 5.')
+        
+        else:
+            
+            avalia = AvaliacaoClass(cliente, nota)
+        
+            self._avaliacao.append(avalia)
 
     @property
     def media_avaliacoes(self):
         if not self._avaliacao:
-            return 0
+           
+            return f'Nenhuma avaliação'
+        
         soma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)
+        
         quantidade_de_notas = len(self._avaliacao)
+        
         media = round(soma_das_notas / quantidade_de_notas, 1)
+        
         return media
-"""    
+"""
 restaurante_praca = Restaurante('Praça', 'Gourmet')
 restaurante_praca.alterar_status()  # Ativa o restaurante 'Praça'
 restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
 restaurante_pizza.listar_restaurantes()
 restaurante_pizza = Restaurante('Pizza 2', 'Normal')
 """
+restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
+restaurante_pizza.receber_avaliacao('Robert', 3)
+    
+restaurante_pizza.receber_avaliacao('Robert', 0)
+restaurante_pizza.receber_avaliacao('Robert', 5)
+
+restaurante_pizza.listar_restaurantes()
