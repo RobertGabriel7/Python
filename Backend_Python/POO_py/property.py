@@ -35,7 +35,7 @@ class Restaurante:
     @property
     def ativo(self):
         # Retorna o valor do atributo privado _ativo
-        return "Carro" if self._ativo else "Falso"
+        return "Ativo" if self._ativo else "Falso"
 
     def alterar_status(self):
         # Alterna o status do restaurante entre ativo e inativo
@@ -73,9 +73,13 @@ restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
 restaurante_pizza.listar_restaurantes()
 restaurante_pizza = Restaurante('Pizza 2', 'Normal')
 """
+
+#Criando o objeto a partir da Classe Restaurante
 restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
-restaurante_pizza.receber_avaliacao('Robert', 3)
-    
+
+#Usando as funções da Class Restaurante depois de instância um objeto
+restaurante_pizza.alterar_status()
+restaurante_pizza.receber_avaliacao('Robert', 5)   
 restaurante_pizza.receber_avaliacao('Robert', 0)
 restaurante_pizza.receber_avaliacao('Robert', 5)
 
