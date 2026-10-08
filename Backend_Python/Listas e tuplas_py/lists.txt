@@ -17,7 +17,7 @@ Acesso por índice: Permite acessar um elemento específico da coleção usando 
 Exemplo: minha_colecao[1]
 
 Busca por índice (.index()): Retorna o índice (posição) da primeira ocorrência de um elemento específico na coleção.
-Exemplo: posicao = minha_colecao.index(20)
+Exemplo: posicao = minha_colecao.index('Texto' ou Numero)
 
 enumerate(): Função embutida que percorre uma coleção gerando pares de (índice, elemento) a cada iteração do loop.
 Exemplo: for indice, item in enumerate(minha_colecao, start=1): print(indice, item)
