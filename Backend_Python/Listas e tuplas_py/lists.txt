@@ -1,0 +1,103 @@
+### O que poderia ser adicionado:
+
+1. **`len()`** (Operações Comuns): Retorna a quantidade total de elementos da coleção/string (usado direto em listas, tuplas, strings, etc.).
+2. **`min()` e `max()**` (Operações Comuns): Encontram o menor e o maior valor dentro de uma coleção numérica ou de texto.
+3. **`sum()`** (Operações Comuns): Soma todos os elementos de uma coleção numérica.
+4. **`.upper()` e `.lower()**` (Tratamento de Strings): Convertem o texto para maiúsculas ou minúsculas (essenciais para padronizar `inputs`).
+5. **`.replace()`** (Tratamento de Strings): Substitui um trecho do texto por outro.
+6. **`join()`** (Tratamento de Strings): Junta os elementos de uma lista de strings em uma única frase usando um separador (o inverso do `.split()`).
+7. **`.count()`** (Operações Comuns): Conta quantas vezes um determinado valor aparece na lista ou tupla.
+8. **`.clear()`** (Métodos Específicos para Listas): Esvazia completamente uma lista.
+
+
+"""
+Operações Comuns (aplicáveis a Listas e Tuplas):
+
+Acesso por índice: Permite acessar um elemento específico da coleção usando sua posição numérica (índice), que começa em 0.
+Exemplo: minha_colecao[1]
+
+Busca por índice (.index()): Retorna o índice (posição) da primeira ocorrência de um elemento específico na coleção.
+Exemplo: posicao = minha_colecao.index(20)
+
+enumerate(): Função embutida que percorre uma coleção gerando pares de (índice, elemento) a cada iteração do loop.
+Exemplo: for indice, item in enumerate(minha_colecao, start=1): print(indice, item)
+
+len(): Função interna que retorna o tamanho total (quantidade de elementos) de uma coleção ou string.
+Exemplo: quantidade = len(minha_colecao)
+
+.count(): Retorna quantas vezes um elemento específico aparece na coleção.
+Exemplo: total = minha_colecao.count(20)
+
+min() / max() / sum(): Funções que retornam o menor valor, o maior valor e a soma dos elementos de uma coleção, respectivamente.
+Exemplo: menor = min(minha_colecao) | total = sum(minha_colecao)
+
+Slicing: Utilizado para extrair uma parte (sub-coleção) de uma lista ou tupla, especificando um intervalo de índices. O índice final do intervalo não é incluído.
+Exemplo: minha_colecao[0:2]
+
+Operador in: Verifica se um determinado elemento está presente na coleção, retornando True se sim e False se não.
+Exemplo: 20 in minha_colecao
+
+Métodos / Funções para Leitura e Tratamento de Strings:
+
+input(): Função interna usada para ler/receber dados digitados pelo usuário no terminal (retorna uma string).
+Exemplo: texto = input("Digite algo: ")
+
+.split(): Método de string que divide um texto em uma lista de pedaços, usando um separador especificado (como vírgula ou espaço).
+Exemplo: lista_palavras = "a, b, c".split(",")
+
+.join(): Método de string que une os elementos de uma lista de strings em um único texto, utilizando um separador.
+Exemplo: texto = ", ".join(["a", "b", "c"])
+
+.strip(): Método de string que remove espaços em branco extras (e quebras de linha) do início e do fim de um texto.
+Exemplo: item_limpo = "  Arroz  ".strip()
+
+.upper() / .lower(): Métodos que convertem todos os caracteres de uma string para maiúsculas ou minúsculas.
+Exemplo: "Sim".lower()  # Retorna "sim"
+
+.capitalize(): Método de string que converte o primeiro caractere do texto para maiúsculo (e o restante para minúsculo).
+Exemplo: "arroz".capitalize()  # Retorna "Arroz"
+
+.title(): Método de string que converte a primeira letra de cada palavra da string para maiúscula.
+Exemplo: "arroz e feijão".title()  # Retorna "Arroz E Feijão"
+
+.replace(): Substitui todas as ocorrências de um trecho de texto por outro.
+Exemplo: "banana".replace("a", "o")  # Retorna "bonono"
+
+tuple(): Construtor / Função que converte um objeto iterável (como uma lista ou string) em uma tupla.
+Exemplo: minha_tupla = tuple([1, 2, 3])
+
+Métodos Específicos para Listas (devido à sua mutabilidade):
+
+.append(): Adiciona um novo elemento ao final da lista.
+Exemplo: lista.append(4)
+
+.insert(): Insere um elemento em uma posição específica da lista.
+Exemplo: lista.insert(1, 5)
+
+.remove(): Remove a primeira ocorrência do valor especificado na lista.
+Exemplo: lista.remove(2)
+
+.sort(): Ordena os elementos da lista em ordem crescente.
+Exemplo: lista.sort()
+
+.reverse(): Inverte a ordem dos elementos da lista.
+Exemplo: lista.reverse()
+
+.pop(): Remove um elemento da lista em uma posição específica (pelo índice) e retorna o elemento removido.
+Exemplo: lista.pop(1)
+
+.clear(): Remove todos os elementos da lista, deixando-a totalmente vazia.
+Exemplo: lista.clear()
+
+Além desses, também foi mencionada a concatenação de tuplas (usando o operador +) para criar uma nova tupla a partir de tuplas existentes, e a iteração sobre elementos (com for loops) e o desempacotamento (atribuir elementos a variáveis) como formas de trabalhar com ambas as coleções.
+"""
+
+lista = [0,1,3]
+
+lista = [1, "texto", 3.14, False, [1,2,3]]
+
+# As tuplas são coleções de elementos imutáveis (não pode ser alterado depois de declarar)
+
+tupla = (1,2,3)
+
+tupla_mista = (1, "texto", 3.14, False, [1,2,3])
