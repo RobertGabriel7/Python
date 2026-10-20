@@ -1,0 +1,2 @@
+alunos_idades_notas = [p.strip() for p in input('Digite os dados do aluno no formato Nome, Idade, Nota separados por vírgula: ').split(', ')]
+for indice in range(0, len(alunos_idades_notas), 3): print(f'Aluno: {alunos_idades_notas[indice]}\nIdade: {int(alunos_idades_notas[indice + 1])}\nNota: {float(alunos_idades_notas[indice + 2])}')
