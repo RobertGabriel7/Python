@@ -73,7 +73,7 @@ restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
 restaurante_pizza.listar_restaurantes()
 restaurante_pizza = Restaurante('Pizza 2', 'Normal')
 """
-
+'''
 #Criando o objeto a partir da Classe Restaurante
 restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
 
@@ -84,3 +84,4 @@ restaurante_pizza.receber_avaliacao('Robert', 0)
 restaurante_pizza.receber_avaliacao('Robert', 5)
 
 restaurante_pizza.listar_restaurantes()
+'''

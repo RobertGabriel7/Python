@@ -1,4 +1,4 @@
-from teste03_livro import Livro
+from Backend_Python.POO_py.taks.teste03_livro import Livro
 
 # Importação (from teste03_livro import Livro):
 # When Python executa o arquivo biblioteca.py e encontra o import, 
