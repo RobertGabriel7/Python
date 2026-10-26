@@ -17,6 +17,7 @@ class Restaurante:
         # Comeca como inativo por padrao
         self._ativo = False
         self._avaliacao = []
+        self._cardapio = []
         # Adiciona o objeto atual (self) na lista compartilhada da classe
         Restaurante.restaurantes.append(self)
     
@@ -66,22 +67,33 @@ class Restaurante:
         media = round(soma_das_notas / quantidade_de_notas, 1)
         
         return media
-"""
-restaurante_praca = Restaurante('Praça', 'Gourmet')
-restaurante_praca.alterar_status()  # Ativa o restaurante 'Praça'
-restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
-restaurante_pizza.listar_restaurantes()
-restaurante_pizza = Restaurante('Pizza 2', 'Normal')
-"""
-'''
+    def adicionar_bebida_no_cardapio(self, bebida):
+    
+        self._cardapio.append(bebida)
+    
+    def adicionar_prato_no_cardapio(self, prato):
+        
+        self._cardapio.append(prato)
+    
+    def listar_cardapio(self):
+        print(self._cardapio)
+        
+            
+
+#restaurante_praca = Restaurante('Praça', 'Gourmet')
+#restaurante_praca.alterar_status()  # Ativa o restaurante 'Praça'
+#restaurante_pizza.listar_restaurantes()
+#restaurante_pizza = Restaurante('Pizza 2', 'Normal')
+
 #Criando o objeto a partir da Classe Restaurante
 restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
 
 #Usando as funções da Class Restaurante depois de instância um objeto
 restaurante_pizza.alterar_status()
-restaurante_pizza.receber_avaliacao('Robert', 5)   
-restaurante_pizza.receber_avaliacao('Robert', 0)
-restaurante_pizza.receber_avaliacao('Robert', 5)
 
+restaurante_pizza.receber_avaliacao('Robert', 3)   
+restaurante_pizza.receber_avaliacao('Robert', 1)
+restaurante_pizza.receber_avaliacao('Robert', 5)
+restaurante_pizza.adicionar_prato_no_cardapio('Pizza')
+restaurante_pizza.listar_cardapio()
 restaurante_pizza.listar_restaurantes()
-'''

@@ -9,6 +9,10 @@ from modelos.cardapio.bebida import Bebida
 bebida_suco = Bebida('Suco de Manga', 10.00, 'grande')
 prato_italiano = Prato('Pizaa Marguerita', 35.00, 'Pizza com queijo, tomate e oregano')
 
+restaurante_praca = Restaurante('Praca', 'Gourmet')
+restaurante_praca.adicionar_bebida_no_cardapio(bebida_suco)
+restaurante_praca.adicionar_prato_no_cardapio(prato_italiano)
+
 '''
 pontoPraMais.receber_avaliacao('Robert', 10)
 pontoPraMais.receber_avaliacao('Valentina', 5)
