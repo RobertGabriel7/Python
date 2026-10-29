@@ -4,6 +4,7 @@ import sys
 # Configura o terminal para exibir caracteres UTF-8 (acentos, ç, etc.) sem erros de codificação
 sys.stdout.reconfigure(encoding="utf-8")
 
+from modelos.cardapio.item_do_cardapio import ItemCardapio
 from avaliacao import AvaliacaoClass
 
 class Restaurante:
@@ -67,18 +68,29 @@ class Restaurante:
         media = round(soma_das_notas / quantidade_de_notas, 1)
         
         return media
-    def adicionar_bebida_no_cardapio(self, bebida):
-    
-        self._cardapio.append(bebida)
-    
-    def adicionar_prato_no_cardapio(self, prato):
         
-        self._cardapio.append(prato)
-    
-    def listar_cardapio(self):
-        print(self._cardapio)
-        
+    def adicionar_no_cardapio (self, item):
+        # isinstance verifica se um item é uma instancia ou não de uma class (item, class) ou se for uma class
+        # derivada da class pai 
+        if isinstance(item, ItemCardapio): 
             
+            self._cardapio.append(item)
+    
+    # Metodo somente para leitura
+    @property    
+    def exibir_cardapio(self):
+        print(f'Cardapio do resturante {self._nome}\n')
+        
+        for indice, item in enumerate(self._cardapio, start=1):
+        
+            # hasattr verifica se há um atributo ou não determinada class
+            if hasattr(item, 'descricao'):
+                mensagem_prato = f'{indice}° item: {item._nome} | Preco: R${item._preco} | Descricao: {item.descricao}'
+                print(mensagem_prato)
+            else:
+                mensagem_bebida = f'{indice}° item: {item._nome} | Preco: R${item._preco} | Tamanho: {item.tamanho}'
+                print(mensagem_bebida)
+
 
 #restaurante_praca = Restaurante('Praça', 'Gourmet')
 #restaurante_praca.alterar_status()  # Ativa o restaurante 'Praça'
@@ -86,14 +98,6 @@ class Restaurante:
 #restaurante_pizza = Restaurante('Pizza 2', 'Normal')
 
 #Criando o objeto a partir da Classe Restaurante
-restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
+#restaurante_pizza = Restaurante('Pizza Express', 'Italiana')
 
 #Usando as funções da Class Restaurante depois de instância um objeto
-restaurante_pizza.alterar_status()
-
-restaurante_pizza.receber_avaliacao('Robert', 3)   
-restaurante_pizza.receber_avaliacao('Robert', 1)
-restaurante_pizza.receber_avaliacao('Robert', 5)
-restaurante_pizza.adicionar_prato_no_cardapio('Pizza')
-restaurante_pizza.listar_cardapio()
-restaurante_pizza.listar_restaurantes()

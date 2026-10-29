@@ -19,7 +19,7 @@ Busca por índice (.index()): Retorna o índice (posição) da primeira ocorrên
 Exemplo: posicao = minha_colecao.index(30)  # Resposta: 2
 
 enumerate(): Função embutida que percorre uma coleção gerando pares de (índice, elemento) a cada iteração do loop.
-Exemplo: for indice, item in enumerate(minha_colecao, start=1): print(indice, item)  # Resposta: imprime cada item enumerado a partir do 1
+Exemplo: for indice, item in enumerate(minha_colecao, qual valor a minha lista vai começar? start=1): print(indice, item)  # Resposta: imprime cada item enumerado a partir do 1
 
 len(): Função interna que retorna o tamanho total (quantidade de elementos) de uma coleção ou string.
 Exemplo: quantidade = len(minha_colecao)  # Resposta: 5

@@ -7,11 +7,14 @@ from modelos.cardapio.bebida import Bebida
 #pontoPraMais = Restaurante('Carro chefe', 'Classic')
 
 bebida_suco = Bebida('Suco de Manga', 10.00, 'grande')
-prato_italiano = Prato('Pizaa Marguerita', 35.00, 'Pizza com queijo, tomate e oregano')
+prato_italiano = Prato('Pizaa Marguerita', 35.00, 'Pizza com queijo, tomate e oregano.')
 
 restaurante_praca = Restaurante('Praca', 'Gourmet')
-restaurante_praca.adicionar_bebida_no_cardapio(bebida_suco)
-restaurante_praca.adicionar_prato_no_cardapio(prato_italiano)
+restaurante_praca.adicionar_no_cardapio(bebida_suco)
+restaurante_praca.adicionar_no_cardapio(prato_italiano)
+
+bebida_suco.aplicar_desconto()
+prato_italiano.aplicar_desconto()
 
 '''
 pontoPraMais.receber_avaliacao('Robert', 10)
@@ -21,8 +24,7 @@ pontoPraMais.listar_restaurantes()
 '''
 
 def main():
-    print(bebida_suco)
-    print(prato_italiano)
+    restaurante_praca.exibir_cardapio
 if __name__ == '__main__':
         main()
 
