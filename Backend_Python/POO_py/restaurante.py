@@ -82,8 +82,8 @@ class Restaurante:
         print(f'Cardapio do resturante {self._nome}\n')
         
         for indice, item in enumerate(self._cardapio, start=1):
-        
-            # hasattr verifica se há um atributo ou não determinada class
+            
+            # hasattr verifica se há um atributo ou não de determinada class
             if hasattr(item, 'descricao'):
                 mensagem_prato = f'{indice}° item: {item._nome} | Preco: R${item._preco} | Descricao: {item.descricao}'
                 print(mensagem_prato)

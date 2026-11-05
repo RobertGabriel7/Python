@@ -1,6 +1,7 @@
 from restaurante import Restaurante
 from modelos.cardapio.prato import Prato
 from modelos.cardapio.bebida import Bebida
+from modelos.cardapio.sobremesa import Sobremesa
 #from modelos.cardapio.item_do_cardapio import ItemCardapio
 
 
@@ -8,11 +9,12 @@ from modelos.cardapio.bebida import Bebida
 
 bebida_suco = Bebida('Suco de Manga', 10.00, 'grande')
 prato_italiano = Prato('Pizaa Marguerita', 35.00, 'Pizza com queijo, tomate e oregano.')
+sobremesa = Sobremesa('')
 
 restaurante_praca = Restaurante('Praca', 'Gourmet')
 restaurante_praca.adicionar_no_cardapio(bebida_suco)
 restaurante_praca.adicionar_no_cardapio(prato_italiano)
-
+restaurante_praca.adicionar_no_cardapio()
 bebida_suco.aplicar_desconto()
 prato_italiano.aplicar_desconto()
 
