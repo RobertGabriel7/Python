@@ -2,19 +2,20 @@ from item_do_cardapio import ItemCardapio
 
 class Sobremesa (ItemCardapio):
     
-    def __init__(self, nome, preco, tipo, tamanho, descricao):
+    def __init__(self, nome, preco, descricao, tipo, tamanho):
         
         super().__init__(nome, preco)
         
+        self.descricao = descricao
         self.tipo = tipo
         self.tamanho = tamanho
-        self.descricao = descricao
+        
         
     def __str__(self):
         
-        pass
+        return self._nome
         
     @classmethod
     
     def aplicar_desconto(self):
-        self._preco -= (self._preco * 0.07)
+        self._preco -= (self._preco * 0.15)
