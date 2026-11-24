@@ -1,2 +1,2 @@
 # Python
- Meu desenvolvimento em Python, baby.
+ Meu desenvolvimento em Python.
